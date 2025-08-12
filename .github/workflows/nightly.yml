@@ -45,10 +45,10 @@ jobs:
           name: nightly-${{ env.ARTIFACT_DATE }}
           path: app/build/outputs/apk/debug/OSMTracker-nightly-*.apk
 
-      - name: Delete existing Nightly release
-        run: gh release delete nightly --cleanup-tag --yes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Delete existing Nightly release
+#        run: gh release delete nightly --cleanup-tag --yes
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create GitHub Nightly Release
         uses: softprops/action-gh-release@v2.2.2
